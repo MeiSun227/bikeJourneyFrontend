@@ -1,20 +1,17 @@
-import { Box, CssBaseline } from '@mui/material';
 import React from 'react';
-import './App.css';
-import NavBar from './components/NavBar/NavBar';
-import DashboardPage from './page/DashboardPage';
+import { CssBaseline } from '@mui/material';
 import AppRoutes from './Route';
+import Container from '@mui/material/Container';
+import NavBar from './components/NavBar/NavBar';
 
 const App = () => {
-
   return (
-
-    <div className="App">
-      <NavBar />
-      <Box sx={{ display: 'flex' }}>
-        <CssBaseline />
-        <AppRoutes />
-      </Box>
+    <div id='App' >
+        <NavBar/>
+          <CssBaseline />
+          <Container>
+          <AppRoutes />
+          </Container>
     </div>
   );
 

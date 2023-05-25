@@ -11,15 +11,15 @@ export type Journey = {
 }
 
 export type Station = {
-    FID: number,
+    FID?: string,
     id?: number,
     name?: string,
     address: string,
     city: string,
     operator: string,
-    capacities: number
-    x: number
-    y: number
+    capacities: string,
+    x?: string
+    y?: string
   }
 
 export type StationDetail={
@@ -51,5 +51,4 @@ export interface HeadCell {
   disablePadding: boolean;
   id: string;
   label: string;
-  numeric: boolean;
 }

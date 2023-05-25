@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { Paper, Table, TableBody, TableCell, TableContainer, TableHead, TablePagination, TableRow, TableSortLabel, TextField } from "@mui/material"
 import { useQuery } from 'react-query';
+import { Paper, Table, TableBody, TableCell, TableContainer, TableHead, TablePagination, TableRow, TextField } from "@mui/material"
 import { getJourney } from '../../services/journeyServices';
 import { HeadCell, Journey } from '../../type';
 
@@ -9,38 +9,35 @@ import { HeadCell, Journey } from '../../type';
 const headCells: readonly HeadCell[] = [
     {
         id: 'departure',
-        numeric: false,
+
         disablePadding: true,
         label: 'Departure Date',
     },
     {
         id: 'departurestation_name',
-        numeric: true,
+
         disablePadding: false,
         label: 'Departure Station Name',
     },
     {
         id: 'return',
-        numeric: true,
         disablePadding: false,
         label: 'Return Date',
     },
     {
         id: 'returnstation_name',
-        numeric: true,
+
         disablePadding: false,
         label: 'Return Station Name',
     },
     {
         id: 'duration',
-        numeric: true,
         disablePadding: false,
         label: 'Duration (s)',
     },
     {
         id: 'covereddistance',
-        numeric: true,
-        disablePadding: false,
+        disablePadding: true,
         label: 'Covered Distance (m)',
     },
 ];
@@ -88,14 +85,15 @@ const JourneyTable = (): JSX.Element => {
 
     return (
         <TableContainer component={Paper}>
-            <TextField
-                id="outlined-controlled"
-                label="Search..."
-                sx={{ minWidth: 350, marginTop: 3 }}
-                value={queryOptions.search}
-                onChange={handleSearchChange}
-            />
-
+            <div>
+                <TextField
+                    id="outlined-controlled"
+                    label="Search..."
+                    value={queryOptions.search}
+                    onChange={handleSearchChange}
+                    sx={{ p: 1, m: 2, minWidth: 350 }}
+                />
+            </div>
             {result?.isLoading ?
                 <p>loading</p>
                 :
@@ -106,8 +104,6 @@ const JourneyTable = (): JSX.Element => {
                                 {headCells.map((header) => (
                                     <TableCell key={header.id} onClick={() => handleSortChange(header.id)}>
                                         {header.label}
-                                        <TableSortLabel>
-                                        </TableSortLabel>
                                     </TableCell>))}
 
                             </TableRow>

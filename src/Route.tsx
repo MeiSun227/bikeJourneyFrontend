@@ -1,21 +1,17 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom'
-import JourneyTable from './components/JourneyTabel.tsx/JourneyTablev2';
+import JourneyTable from './components/JourneyTabel.tsx/JourneyTable';
 import StationDetail from './components/StationDetail/StationDetail';
-import DashboardPage from './page/DashboardPage';
-import StationPage from './page/StationPage/StationPage';
-
+import StationTable from './components/StationTable.tsx/StationTable';
+import LandingPage from './page/LandingPage';
 
 const AppRoutes = () =>
-
-
 (
     <Routes>
-        <Route path="/" element={< DashboardPage />} />
         <Route path="/journeys" element={< JourneyTable />} />
-        <Route path="/stations" element={< StationPage />} />
+        <Route path="/stations" element={< StationTable />} />
         <Route path="/station/:stationId" element={<StationDetail />} />
-
+        <Route path="/" element={< LandingPage/>} />
     </Routes>
 )
 
