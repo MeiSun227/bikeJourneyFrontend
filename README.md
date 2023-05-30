@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-This project is a collaborative effort with the backend, which can be accessed through the Bike Journey API. It retrieves data from the backend's REST API and presents it using Material UI components. The project includes unit tests for the components and has the potential for future enhancements, such as incorporating end-to-end testing using tools like Cypress. Lottie React is employed to introduce captivating animation effects on the landing page.
+This project is a collaborative effort with the backend, which can be accessed through the [Bike Journey API](https://github.com/MeiSun227/bikeJourney-api). It retrieves data from the a backends REST API and presents it using Material UI components. The project includes unit tests for the components and has the potential for future enhancements, such as incorporating end-to-end testing using tools like Cypress. Lottie React is employed to introduce captivating animation effects on the landing page.
 
 Key features of the project encompass a dedicated single station page that showcases comprehensive station information alongside an interactive map. Additionally, there is a station table equipped with a search bar for convenient exploration, and a journey table featuring search functionality, pagination, and column sorting to facilitate efficient data navigation.
 
@@ -8,7 +8,6 @@ Key features of the project encompass a dedicated single station page that showc
 - [Configuration](#configuration)
 - [Features](#features)
 - [Testing](#testing)
-
 
 ## Configuration
 
@@ -55,8 +54,5 @@ Read more:
 
 
 ## Testing
-The testing is completed with Jest and please configure jest.config.js to run the unit test. 
-
-- ### `npm run test``
-This command will execute all the test cases available in the application.
+Unit tests are implemented with jest and can be run with `npm run test`
 
