@@ -1,6 +1,8 @@
 # Getting Started with Create React App
 
-This project is built in conjunction with the backend, which can be found in bike journey api. It fetches the REST API from the bike journey backend and displays the data using Material UI components. Additionally, there are unit tests for the components, and further development can include end-to-end testing with tools like Cypress. Lottie React is utilized to incorporate animation effects on the landing page. The features include a single station page that displays station information and a map, a station table with a search bar, and a journey table with a search bar, pagination, and column sorting. 
+This project is a collaborative effort with the backend, which can be accessed through the Bike Journey API. It retrieves data from the backend's REST API and presents it using Material UI components. The project includes unit tests for the components and has the potential for future enhancements, such as incorporating end-to-end testing using tools like Cypress. Lottie React is employed to introduce captivating animation effects on the landing page.
+
+Key features of the project encompass a dedicated single station page that showcases comprehensive station information alongside an interactive map. Additionally, there is a station table equipped with a search bar for convenient exploration, and a journey table featuring search functionality, pagination, and column sorting to facilitate efficient data navigation.
 
 ## Table Contents
 - [Configuration](#configuration)
@@ -46,14 +48,15 @@ Read more:
 ![Alt text](./src/assets/AddStationModal.png "Add Station Modal")
 
 - #### Single Station  
-![Alt text](./src/assets/SingleStation.png "Add Station Modal")
+![Alt text](./src/assets/SingleStation.png "Single station")
 
 - #### Journey Table
-![Alt text](./src/assets/Journey.png"Add Station Modal")
+![Alt text](./src/assets//Journey.png "Journeys table")
 
 
-## Learn More
+## Testing
+The testing is completed with Jest and please configure jest.config.js to run the unit test. 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- ### `npm run test``
+This command will execute all the test cases available in the application.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
