@@ -1,11 +1,7 @@
 import { GoogleMap, Marker, useLoadScript } from '@react-google-maps/api';
+import {Location} from '../../type'
 import './map.css'
 
-type Location = {
-    x: number;
-    y: number
-}
-  
 const BikeMap = ({ x, y }: Location) => {
     const { isLoaded } = useLoadScript({ googleMapsApiKey:'AIzaSyAzr0NP-50GgP0665Qj_1_stJOIWD1YKqA'})
 

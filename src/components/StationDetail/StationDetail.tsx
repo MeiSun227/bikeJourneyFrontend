@@ -4,18 +4,15 @@ import { useQuery } from 'react-query';
 import { useParams } from 'react-router-dom';
 import { getByStationID } from '../../services/stationServices';
 import BikeMap from '../Maps/BikeMap';
-import './index.css'
 
 const StationDetail = () => {
     const { stationId } = useParams()
     const station = useQuery(['station', stationId], () => getByStationID(Number(stationId as string)));
    
-
     if (station.isLoading) {
         return <p>loading</p>
     }
 
- 
     const lat = +station.data.y
     const lng = +station.data.x
     const { name, address, city, capacity, count, departureCount, returnCount } = station.data
@@ -69,7 +66,6 @@ const StationDetail = () => {
                     <BikeMap x={lng} y={lat} />
                 </div>
             </Container>
-
         </div>
     )
 }

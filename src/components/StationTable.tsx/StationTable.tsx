@@ -37,13 +37,14 @@ const headCells: readonly HeadCell[] = [
 const StationTable = () => {
     const [search, setSearch] = React.useState(" ");
     const result = useQuery(['stations', search], () => getStations(search), {
+
         refetchOnWindowFocus: false,
-        refetchInterval: false,
-        staleTime: 1000,
     })
 
     const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         event.preventDefault()
+        console.log('kala')
+        console.log(event.target.value)
         setSearch(event.target.value);
     }
 

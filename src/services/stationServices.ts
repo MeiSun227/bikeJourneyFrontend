@@ -5,6 +5,7 @@ import { Station } from '../type'
 const baseURL = 'http://localhost:3000/api/station'
 
 export const getStations = async (searchValue: string) => {
+    console.log('kala')
     const stations = await axios.get(`${baseURL}?search=${searchValue}`).then(res => res.data)
     return stations
 }

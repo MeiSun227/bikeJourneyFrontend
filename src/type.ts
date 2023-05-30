@@ -52,3 +52,8 @@ export interface HeadCell {
   id: string;
   label: string;
 }
+
+export interface Location  {
+  x: number;
+  y: number
+}

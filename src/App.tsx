@@ -14,7 +14,6 @@ const App = () => {
           </Container>
     </div>
   );
-
 }
 
 export default App;

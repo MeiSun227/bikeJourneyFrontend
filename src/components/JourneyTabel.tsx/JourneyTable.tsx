@@ -5,7 +5,6 @@ import { getJourney } from '../../services/journeyServices';
 import { HeadCell, Journey } from '../../type';
 
 
-
 const headCells: readonly HeadCell[] = [
     {
         id: 'departure',
