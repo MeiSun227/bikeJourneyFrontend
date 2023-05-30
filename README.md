@@ -1,8 +1,14 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is built in conjunction with the backend, which can be found in bike journey api. It fetches the REST API from the bike journey backend and displays the data using Material UI components. Additionally, there are unit tests for the components, and further development can include end-to-end testing with tools like Cypress. Lottie React is utilized to incorporate animation effects on the landing page. The features include a single station page that displays station information and a map, a station table with a search bar, and a journey table with a search bar, pagination, and column sorting. 
 
-## Available Scripts
+## Table Contents
+- [Configuration](#configuration)
+- [Features](#features)
+- [Testing](#testing)
+
+
+## Configuration
 
 In the project directory, you can run:
 
@@ -14,30 +20,37 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `npm test`
+### `Google_api_key`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Developers need to configure a Google API key that is used in the map functionality of the application. This can be achieved by setting up an environment variable specifically for the API key. It is important to ensure that the .env file for TypeScript is correctly configured with the necessary types and embedded values. Please make sure to configure the environment variable correctly and embed it in the .env file for the application to function properly.
 
-### `npm run build`
+Read more:
+ - https://developers.google.com/maps/documentation/javascript/get-api-key
+ - https://dev.to/asjadanis/parsing-env-with-typescript-3jjm
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### `Lottie react`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This is a lightweight animated SVG that can be seamlessly embedded into React/TypeScript code using JSON. It offers various motion and functions that can be utilized within the SVG. Developers have the flexibility to explore and utilize additional motion and functionality within the SVG to enhance the user experience
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Read more: 
+ - https://lottiereact.com/
 
-### `npm run eject`
+## Feature
+- #### Landing Page
+![Alt text](./src/assets/Landing.png "Landing Page")
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- #### Station Table 
+![Alt text](./src/assets/Station.png "Station Table")
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- #### Add Station 
+![Alt text](./src/assets/AddStationModal.png "Add Station Modal")
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- #### Single Station  
+![Alt text](./src/assets/SingleStation.png "Add Station Modal")
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- #### Journey Table
+![Alt text](./src/assets/Journey.png"Add Station Modal")
+
 
 ## Learn More
 

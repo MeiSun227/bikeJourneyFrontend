@@ -3,7 +3,8 @@ import {Location} from '../../type'
 import './map.css'
 
 const BikeMap = ({ x, y }: Location) => {
-    const { isLoaded } = useLoadScript({ googleMapsApiKey:'AIzaSyAzr0NP-50GgP0665Qj_1_stJOIWD1YKqA'})
+    const apiKey :string = process.env.GOOGLE_KEY as string
+    const { isLoaded } = useLoadScript({ googleMapsApiKey:apiKey})
 
     if (!isLoaded) {
         return <p>loading</p>

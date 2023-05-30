@@ -46,7 +46,6 @@ export type StationDetail={
     sortDirection: string
 }
 
-
 export interface HeadCell {
   disablePadding: boolean;
   id: string;
